@@ -1,0 +1,10 @@
+description = 'jndi basics'
+
+repositories {
+    mavenCentral()
+}
+
+dependencies {
+    compile 'com.sun.messaging.mq:fscontext:4.2'
+    testCompile 'junit:junit:4.12'
+}
