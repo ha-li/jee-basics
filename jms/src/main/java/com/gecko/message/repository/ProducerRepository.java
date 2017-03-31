@@ -4,6 +4,7 @@ import com.gecko.message.producer.AbstractProducer;
 import com.gecko.message.producer.Producer;
 import org.apache.activemq.ActiveMQConnectionFactory;
 import org.apache.activemq.pool.PooledConnectionFactory;
+import org.apache.activemq.transport.stomp.Stomp;
 
 import javax.jms.ConnectionFactory;
 import javax.jms.Destination;
@@ -71,5 +72,13 @@ public class ProducerRepository {
       String destinationStr = destination.replace("{env}", ENVIRONMENT);
       Constructor constructor = Class.forName(destinationClass).getConstructor(String.class);
       return (Destination) constructor.newInstance(destinationStr);
+   }
+
+   public static void destroy () {
+      PooledConnectionFactory pooled = (PooledConnectionFactory)connectionMap.get("pooledConnectionKey");
+      pooled.stop();
+
+      ActiveMQConnectionFactory factory = (ActiveMQConnectionFactory)connectionMap.get("connectionKey");
+
    }
 }
