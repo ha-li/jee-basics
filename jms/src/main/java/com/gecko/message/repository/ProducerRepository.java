@@ -3,6 +3,7 @@ package com.gecko.message.repository;
 import com.gecko.message.producer.AbstractProducer;
 import com.gecko.message.producer.Producer;
 import org.apache.activemq.ActiveMQConnectionFactory;
+import org.apache.activemq.pool.PooledConnectionFactory;
 
 import javax.jms.ConnectionFactory;
 import javax.jms.Destination;
@@ -30,6 +31,9 @@ public class ProducerRepository {
       ActiveMQConnectionFactory connectionFactory = new ActiveMQConnectionFactory("admin", "admin", nioConnection);
       connectionMap.put ("connectionKey", connectionFactory);
 
+      PooledConnectionFactory pooledFactory = new PooledConnectionFactory(connectionFactory);
+      connectionMap.put("pooledConnectionKey", pooledFactory);
+
       // fake a database, repository is the db
       // TODO: replace with hibernate
       producerRepository.put (
@@ -39,7 +43,7 @@ public class ProducerRepository {
                                   "Gecko.global.{env}.test.Queue",
                                   "org.apache.activemq.command.ActiveMQQueue",
                                   "com.gecko.message.producer.DefaultProducer",
-                                  "connectionKey") );
+                                  "pooledConnectionKey") );
    }
 
    public static AbstractProducer findProducer(String accessKey) throws Exception {
