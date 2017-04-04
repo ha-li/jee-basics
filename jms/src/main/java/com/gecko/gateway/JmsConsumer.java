@@ -1,7 +1,7 @@
 package com.gecko.gateway;
 
 import com.gecko.gateway.consumer.DefaultConsumer;
-import com.gecko.message.repository.InMemoryRepository;
+import com.gecko.gateway.repository.InMemoryRepository;
 import org.apache.activemq.ActiveMQConnectionFactory;
 import org.apache.activemq.command.ActiveMQQueue;
 import org.apache.activemq.pool.PooledConnectionFactory;

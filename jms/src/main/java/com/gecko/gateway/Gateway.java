@@ -6,7 +6,7 @@ import com.gecko.gateway.repository.ConnectionFactoryRecord;
 import com.gecko.gateway.repository.ConnectionFactoryRepository;
 import com.gecko.gateway.repository.ProducerRecord;
 import com.gecko.gateway.repository.ProducerRepository;
-import com.gecko.message.repository.InMemoryRepository;
+import com.gecko.gateway.repository.InMemoryRepository;
 import org.apache.activemq.ActiveMQConnectionFactory;
 import org.apache.activemq.pool.PooledConnectionFactory;
 

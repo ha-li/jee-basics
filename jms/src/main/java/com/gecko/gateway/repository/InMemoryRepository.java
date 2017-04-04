@@ -1,4 +1,4 @@
-package com.gecko.message.repository;
+package com.gecko.gateway.repository;
 
 import java.util.HashMap;
 import java.util.Map;
