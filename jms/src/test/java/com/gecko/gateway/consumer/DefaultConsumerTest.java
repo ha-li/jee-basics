@@ -30,14 +30,4 @@ public class DefaultConsumerTest {
       DefaultConsumer consumer = new DefaultConsumer ();
       consumer.onMessage (message);
    }
-
-   @Test
-   public void test_exception () throws Exception {
-      ActiveMQTextMessage message = new ActiveMQTextMessage ();
-      message.setText("do nothing");
-
-      DefaultConsumer consumer = new DefaultConsumer ();
-      consumer.onMessage (null);
-   }
-
 }
