@@ -23,7 +23,10 @@ jar {
          "Specification-Vendor": "Gecko Inc",
          "Implementation-Title": "Gecko Inc's JEE Basics Example",
          "Implementation-Version": "0.1",
-         "Implementation-Vendor": "Gecko Inc"
+         "Implementation-Vendor": "Gecko Inc",
+         "Created-By": "0.1 (Gecko Corporation)",
+         "Sealed": true,
+         "Build-date": new Date()
       )
    }
 }
