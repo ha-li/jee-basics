@@ -1,6 +1,5 @@
 package com.gecko.gateway;
 
-import com.gecko.gateway.repository.ProducerRepository;
 import org.apache.activemq.util.StopWatch;
 
 /**

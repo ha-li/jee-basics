@@ -17,7 +17,7 @@ public class GatewayTest {
 
    @BeforeClass
    public static void setUp () {
-      Gateway.getInstance();
+      Gateway.getInstance().start ();
       Gateway.getInstance().registerConnectionFactories ();
    }
 
