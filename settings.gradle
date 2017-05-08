@@ -1,2 +1,5 @@
 include 'jndi'
 include 'jms'
+include 'constraints-api'
+include 'constraints-impl'
+include 'validation'

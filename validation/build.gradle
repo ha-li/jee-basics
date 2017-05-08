@@ -1,0 +1,17 @@
+// a example of bena validation, both custom validations and
+// javax validation builts ins, as well as hibernate custom builts
+description = 'Bean Validation Example'
+
+repositories {
+   mavenCentral ()
+}
+
+dependencies {
+
+   compile project (':constraints-api')
+   //compile project (':json')
+   compile 'org.hibernate:hibernate-validator:5.4.1.Final'
+   // an el impl is req by hib val
+   compile 'org.glassfish:javax.el:3.0.1-b08'
+   testCompile 'junit:junit:4.12'
+}
