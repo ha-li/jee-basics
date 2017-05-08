@@ -9,7 +9,8 @@
         constraints defined in deployment descriptors will
         override constraints annotated as meta data.
     -->
+    <!--
     <constraint-mapping>META-INF/prison-constraints.xml</constraint-mapping>
     <constraint-mapping>META-INF/v2/married-constraints.xml</constraint-mapping>
-
+    -->
 </validation-config>

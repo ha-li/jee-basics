@@ -36,12 +36,13 @@ public class UniversalValidator {
    } */
 
    // do some validation 101
-   public static <T> void validate (T t) {
-      Set<ConstraintViolation<T>> violations = validator.validate(t);
+   public static <T> void validate (T t, Class<?>... groups) {
+      Set<ConstraintViolation<T>> violations = validator.validate(t, groups);
       if(!violations.isEmpty ()) {
          throw new ConstraintViolationException ("Invalid object based on constraints.", violations);
       }
    }
+
 
    public static <T> void validateProperty (T t, String propertyName, Class<?> ... groups) {
       Set<ConstraintViolation<T>> violations = validator.validateProperty (t, propertyName, groups);
